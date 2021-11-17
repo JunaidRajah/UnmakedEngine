@@ -29,6 +29,7 @@
 		A155F34E2744A1B60059DB19 /* HeroSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F34D2744A1B60059DB19 /* HeroSearchViewModel.swift */; };
 		A155F3502744A1CE0059DB19 /* HeroCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F34F2744A1CE0059DB19 /* HeroCollectionViewModel.swift */; };
 		A155F3522744A5250059DB19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F3512744A5250059DB19 /* Constants.swift */; };
+		A155F3542744A8050059DB19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A155F3532744A8050059DB19 /* GoogleService-Info.plist */; };
 		A1C145232744680100B2E1D1 /* UnmaskedEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C145192744680000B2E1D1 /* UnmaskedEngine.framework */; };
 		A1C145282744680100B2E1D1 /* UnmaskedEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C145272744680100B2E1D1 /* UnmaskedEngineTests.swift */; };
 		A1C1452A2744680100B2E1D1 /* UnmaskedEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = A1C1451C2744680000B2E1D1 /* UnmaskedEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,6 +69,7 @@
 		A155F34D2744A1B60059DB19 /* HeroSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSearchViewModel.swift; sourceTree = "<group>"; };
 		A155F34F2744A1CE0059DB19 /* HeroCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewModel.swift; sourceTree = "<group>"; };
 		A155F3512744A5250059DB19 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A155F3532744A8050059DB19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A1C145192744680000B2E1D1 /* UnmaskedEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnmaskedEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C1451C2744680000B2E1D1 /* UnmaskedEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnmaskedEngine.h; sourceTree = "<group>"; };
 		A1C1451D2744680000B2E1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				A155F31F27449D030059DB19 /* Repositories */,
 				A1C1451C2744680000B2E1D1 /* UnmaskedEngine.h */,
 				A1C1451D2744680000B2E1D1 /* Info.plist */,
+				A155F3532744A8050059DB19 /* GoogleService-Info.plist */,
 			);
 			path = UnmaskedEngine;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A155F3542744A8050059DB19 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

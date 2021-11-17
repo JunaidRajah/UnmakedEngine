@@ -8,9 +8,9 @@
 import Foundation
 
 public struct SuperheroSearchResponseModel: Codable {
-    let response: String
-    let resultsFor: String
-    let results: [SuperheroResponseModel]?
+    public let response: String
+    public let resultsFor: String
+    public let results: [SuperheroResponseModel]?
     
     enum CodingKeys: String, CodingKey {
         case response, results

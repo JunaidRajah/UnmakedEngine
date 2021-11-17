@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 public typealias userResult = (Result<FirebaseAuth.User, Error>) -> Void
 public typealias userCollectionResult = (Result<[superheroCollectionModel], Error>) -> Void

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Firebase
 
 public enum statistic: String, CaseIterable {
     case intelligence = "intelligence"

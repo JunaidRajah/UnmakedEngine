@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Firebase
 
 public class MenuViewModel {
     

@@ -10,24 +10,24 @@ import Foundation
 import Foundation
 
 @objcMembers public class SuperheroResponseModel: NSObject, Codable {
-    let response: String?
-    let id: String
-    let name: String
-    let powerstats: Powerstats
-    let biography: Biography
-    let appearance: Appearance
-    let work: Work
-    let connections: Connections
-    let image: Image
+    public let response: String?
+    public let id: String
+    public let name: String
+    public let powerstats: Powerstats
+    public let biography: Biography
+    public let appearance: Appearance
+    public let work: Work
+    public let connections: Connections
+    public let image: Image
 }
 
 @objcMembers public class Appearance: NSObject, Codable  {
-    let gender: String
-    let race: String
-    let height: [String]
-    let weight: [String]
-    let eyeColor: String
-    let hairColor: String
+    public let gender: String
+    public let race: String
+    public let height: [String]
+    public let weight: [String]
+    public let eyeColor: String
+    public let hairColor: String
 
     enum CodingKeys: String, CodingKey {
         case gender, race, height, weight
@@ -37,13 +37,13 @@ import Foundation
 }
 
 @objcMembers public class Biography: NSObject, Codable  {
-    let fullName: String
-    let alterEgos: String
-    let aliases: [String]
-    let placeOfBirth: String
-    let firstAppearance: String
-    let publisher: String
-    let alignment: String
+    public let fullName: String
+    public let alterEgos: String
+    public let aliases: [String]
+    public let placeOfBirth: String
+    public let firstAppearance: String
+    public let publisher: String
+    public let alignment: String
     
     enum CodingKeys: String, CodingKey {
         case aliases, publisher, alignment
@@ -55,8 +55,8 @@ import Foundation
 }
 
 @objcMembers public class Connections: NSObject, Codable  {
-    let groupAffiliation: String
-    let relatives: String
+    public let groupAffiliation: String
+    public let relatives: String
     
     enum CodingKeys: String, CodingKey {
         case groupAffiliation = "group-affiliation"
@@ -65,21 +65,21 @@ import Foundation
 }
 
 @objcMembers public class Image: NSObject, Codable  {
-    let url: String
+    public let url: String
 }
 
 @objcMembers public class Powerstats: NSObject, Codable  {
-    let intelligence: String
-    let strength: String
-    let speed: String
-    let durability: String
-    let power: String
-    let combat: String
+    public let intelligence: String
+    public let strength: String
+    public let speed: String
+    public let durability: String
+    public let power: String
+    public let combat: String
 }
 
-@objcMembers class Work: NSObject, Codable  {
-    let occupation: String
-    let base: String
+@objcMembers public class Work: NSObject, Codable  {
+    public let occupation: String
+    public let base: String
 }
 
 public func convertToDictionary(hero: SuperheroResponseModel) -> NSDictionary {

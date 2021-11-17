@@ -6,13 +6,15 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseCore
+import FirebaseAuth
+import FirebaseDatabase
 
 public struct User {
-    let uid: String
-    let email: String
+    public let uid: String
+    public let email: String
     
-    public init(authData: Firebase.User) {
+    public init(authData: FirebaseAuth.User) {
         uid = authData.uid
         email = authData.email ?? ""
     }

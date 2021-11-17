@@ -6,13 +6,16 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 public class SuperheroCollectionRepository: UserRepositoryFetchable {
 
     private var ref = Database.database().reference()
     private var handle: AuthStateDidChangeListenerHandle?
     private var refObservers: [DatabaseHandle] = []
+    
+    public init() {}
     
     public func addHero(with name: String, heroToSave: [String : String]) {
         handle = FirebaseAuth.Auth.auth().addStateDidChangeListener { _, currentUser in

@@ -9,6 +9,8 @@ import Foundation
 
 public struct SuperheroSearchRepository: SuperheroRepositorySearchable {
 
+    public init() {}
+    
     public func fetchHeroes(with name: String, completion: @escaping superheroSearchResult) {
         if let url = URLHeroStringBuilder(for: name) {
             let session =  URLSession(configuration: .default)

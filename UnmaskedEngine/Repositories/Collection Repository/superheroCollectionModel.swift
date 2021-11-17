@@ -6,16 +6,17 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 public struct superheroCollectionModel {
-    let ref: DatabaseReference?
-    let key: String
-    let id: String
-    let name: String
-    let publisher: String
-    let alignment: String
-    let image: String
+    public let ref: DatabaseReference?
+    public let key: String
+    public let id: String
+    public let name: String
+    public let publisher: String
+    public let alignment: String
+    public let image: String
     
     public init(id: String, name: String, publisher: String, alignment: String, image: String, key: String = "") {
         self.ref = nil

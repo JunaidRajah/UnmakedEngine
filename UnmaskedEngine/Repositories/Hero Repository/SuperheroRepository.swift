@@ -8,6 +8,8 @@
 import Foundation
 
 public struct SuperheroRepository: SuperheroRepositoryFetchable {
+    
+    public init() {}
 
     public func fetchHero(with id: String, completion: @escaping superheroResult) {
         if let url = URLHeroStringBuilder(for: id) {

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Firebase
 
 public enum heroPublisher: String, CaseIterable {
     case Marvel = "Marvel Comics"
