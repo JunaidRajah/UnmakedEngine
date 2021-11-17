@@ -10,7 +10,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 public class SuperheroCollectionRepository: UserRepositoryFetchable {
-
+    
     private var ref = Database.database().reference()
     private var handle: AuthStateDidChangeListenerHandle?
     private var refObservers: [DatabaseHandle] = []
@@ -19,11 +19,8 @@ public class SuperheroCollectionRepository: UserRepositoryFetchable {
     
     public func addHero(with name: String, heroToSave: [String : String]) {
         handle = FirebaseAuth.Auth.auth().addStateDidChangeListener { _, currentUser in
-            if currentUser == nil {
-                return
-            } else {
-                self.ref.child(currentUser!.uid).child("heroes").child(name).setValue(heroToSave)
-            }
+            guard currentUser != nil else { return }
+            self.ref.child(currentUser!.uid).child("heroes").child(name).setValue(heroToSave)
         }
     }
     
@@ -73,23 +70,23 @@ public class SuperheroCollectionRepository: UserRepositoryFetchable {
     
     public func fetchUserHeroCollection(completion: @escaping userCollectionResult) {
         handle = Auth.auth().addStateDidChangeListener { _, currentUser in
-            if currentUser == nil {
+            guard currentUser != nil else {
                 let userError = CustomError.userNotFound
                 completion(.failure(userError))
-            } else {
-                let completed = self.ref.child(currentUser!.uid).child("heroes").observe(.value) { snapshot in
-                    var newItems: [superheroCollectionModel] = []
-                    for child in snapshot.children {
-                        if
-                            let snapshot = child as? DataSnapshot,
-                            let hero = superheroCollectionModel(snapshot: snapshot) {
-                            newItems.append(hero)
-                        }
-                    }
-                    completion(.success(newItems))
-                }
-                self.refObservers.append(completed)
+                return
             }
+            let completed = self.ref.child(currentUser!.uid).child("heroes").observe(.value) { snapshot in
+                var newItems: [superheroCollectionModel] = []
+                for child in snapshot.children {
+                    if
+                        let snapshot = child as? DataSnapshot,
+                        let hero = superheroCollectionModel(snapshot: snapshot) {
+                        newItems.append(hero)
+                    }
+                }
+                completion(.success(newItems))
+            }
+            self.refObservers.append(completed)
         }
     }
 }
