@@ -25,6 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+  'UnmaskedEngine is the framework that the mobile app unmasked is built on.'
                    DESC
 
   spec.homepage     = "https://github.com/JunaidRajah/UnmaskedEngine"

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+public protocol GameViewModelDelegate: AnyObject {
+    func refreshViewContents()
+    func showUnlockHeroAlert(with name: String, with publisher: String)
+    func showErrorMessage(error: Error)
+}
