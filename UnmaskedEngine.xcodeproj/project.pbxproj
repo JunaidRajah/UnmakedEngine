@@ -3,11 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		260E3C77A58E5D1AEE307CDB /* Pods_UnmaskedEngine_UnmaskedEngineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA99CD37385F08B29747D59 /* Pods_UnmaskedEngine_UnmaskedEngineTests.framework */; };
+		A155F32527449DD00059DB19 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F32427449DD00059DB19 /* MenuViewModel.swift */; };
+		A155F32A27449E6D0059DB19 /* SuperheroRepositoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F32927449E6D0059DB19 /* SuperheroRepositoryProtocols.swift */; };
+		A155F32C27449E970059DB19 /* SuperheroCollectionRepositoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F32B27449E970059DB19 /* SuperheroCollectionRepositoryProtocols.swift */; };
+		A155F32E27449ED30059DB19 /* SuperheroSearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F32D27449ED30059DB19 /* SuperheroSearchResponseModel.swift */; };
+		A155F33027449EF00059DB19 /* SuperheroSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F32F27449EF00059DB19 /* SuperheroSearchRepository.swift */; };
+		A155F33227449F410059DB19 /* SuperheroResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F33127449F410059DB19 /* SuperheroResponseModel.swift */; };
+		A155F33427449F690059DB19 /* SuperheroRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F33327449F690059DB19 /* SuperheroRepository.swift */; };
+		A155F33627449F870059DB19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F33527449F870059DB19 /* User.swift */; };
+		A155F33827449F9D0059DB19 /* SuperheroCollectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F33727449F9D0059DB19 /* SuperheroCollectionRepository.swift */; };
+		A155F33A27449FB10059DB19 /* superheroCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F33927449FB10059DB19 /* superheroCollectionModel.swift */; };
+		A155F33C27449FE70059DB19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F33B27449FE70059DB19 /* Extensions.swift */; };
+		A155F33E2744A00C0059DB19 /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F33D2744A00C0059DB19 /* CustomErrors.swift */; };
+		A155F3422744A0B20059DB19 /* MenuViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F3412744A0B20059DB19 /* MenuViewModelDelegate.swift */; };
+		A155F3442744A0CA0059DB19 /* LoginViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F3432744A0CA0059DB19 /* LoginViewModelDelegate.swift */; };
+		A155F3462744A0E50059DB19 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F3452744A0E50059DB19 /* LoginViewModel.swift */; };
+		A155F3482744A1030059DB19 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F3472744A1030059DB19 /* GameViewModel.swift */; };
+		A155F34A2744A11E0059DB19 /* GameViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F3492744A11E0059DB19 /* GameViewModelDelegate.swift */; };
+		A155F34C2744A1850059DB19 /* ViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F34B2744A1850059DB19 /* ViewModelDelegate.swift */; };
+		A155F34E2744A1B60059DB19 /* HeroSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F34D2744A1B60059DB19 /* HeroSearchViewModel.swift */; };
+		A155F3502744A1CE0059DB19 /* HeroCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F34F2744A1CE0059DB19 /* HeroCollectionViewModel.swift */; };
+		A155F3522744A5250059DB19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F3512744A5250059DB19 /* Constants.swift */; };
+		A155F3542744A8050059DB19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A155F3532744A8050059DB19 /* GoogleService-Info.plist */; };
 		A1C145232744680100B2E1D1 /* UnmaskedEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C145192744680000B2E1D1 /* UnmaskedEngine.framework */; };
 		A1C145282744680100B2E1D1 /* UnmaskedEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C145272744680100B2E1D1 /* UnmaskedEngineTests.swift */; };
 		A1C1452A2744680100B2E1D1 /* UnmaskedEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = A1C1451C2744680000B2E1D1 /* UnmaskedEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +48,28 @@
 
 /* Begin PBXFileReference section */
 		46A4F3E0E038AFB0E402ADF9 /* Pods-UnmaskedEngine-UnmaskedEngineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnmaskedEngine-UnmaskedEngineTests.debug.xcconfig"; path = "Target Support Files/Pods-UnmaskedEngine-UnmaskedEngineTests/Pods-UnmaskedEngine-UnmaskedEngineTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A155F32427449DD00059DB19 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		A155F32927449E6D0059DB19 /* SuperheroRepositoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroRepositoryProtocols.swift; sourceTree = "<group>"; };
+		A155F32B27449E970059DB19 /* SuperheroCollectionRepositoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroCollectionRepositoryProtocols.swift; sourceTree = "<group>"; };
+		A155F32D27449ED30059DB19 /* SuperheroSearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSearchResponseModel.swift; sourceTree = "<group>"; };
+		A155F32F27449EF00059DB19 /* SuperheroSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSearchRepository.swift; sourceTree = "<group>"; };
+		A155F33127449F410059DB19 /* SuperheroResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroResponseModel.swift; sourceTree = "<group>"; };
+		A155F33327449F690059DB19 /* SuperheroRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroRepository.swift; sourceTree = "<group>"; };
+		A155F33527449F870059DB19 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A155F33727449F9D0059DB19 /* SuperheroCollectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroCollectionRepository.swift; sourceTree = "<group>"; };
+		A155F33927449FB10059DB19 /* superheroCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superheroCollectionModel.swift; sourceTree = "<group>"; };
+		A155F33B27449FE70059DB19 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A155F33D2744A00C0059DB19 /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
+		A155F3412744A0B20059DB19 /* MenuViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelDelegate.swift; sourceTree = "<group>"; };
+		A155F3432744A0CA0059DB19 /* LoginViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelDelegate.swift; sourceTree = "<group>"; };
+		A155F3452744A0E50059DB19 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A155F3472744A1030059DB19 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		A155F3492744A11E0059DB19 /* GameViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelDelegate.swift; sourceTree = "<group>"; };
+		A155F34B2744A1850059DB19 /* ViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDelegate.swift; sourceTree = "<group>"; };
+		A155F34D2744A1B60059DB19 /* HeroSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSearchViewModel.swift; sourceTree = "<group>"; };
+		A155F34F2744A1CE0059DB19 /* HeroCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewModel.swift; sourceTree = "<group>"; };
+		A155F3512744A5250059DB19 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A155F3532744A8050059DB19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A1C145192744680000B2E1D1 /* UnmaskedEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnmaskedEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C1451C2744680000B2E1D1 /* UnmaskedEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnmaskedEngine.h; sourceTree = "<group>"; };
 		A1C1451D2744680000B2E1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +104,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A155F31F27449D030059DB19 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A155F32827449E130059DB19 /* Collection Repository */,
+				A155F32727449E030059DB19 /* Hero Repository */,
+				A155F32627449DF60059DB19 /* Search Repository */,
+				A155F32327449D810059DB19 /* Repository Protocols */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A155F32027449D230059DB19 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A155F33B27449FE70059DB19 /* Extensions.swift */,
+				A155F33D2744A00C0059DB19 /* CustomErrors.swift */,
+				A155F3512744A5250059DB19 /* Constants.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A155F32127449D430059DB19 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A155F32227449D730059DB19 /* View Model Delegates */,
+				A155F32427449DD00059DB19 /* MenuViewModel.swift */,
+				A155F3452744A0E50059DB19 /* LoginViewModel.swift */,
+				A155F3472744A1030059DB19 /* GameViewModel.swift */,
+				A155F34D2744A1B60059DB19 /* HeroSearchViewModel.swift */,
+				A155F34F2744A1CE0059DB19 /* HeroCollectionViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A155F32227449D730059DB19 /* View Model Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				A155F3412744A0B20059DB19 /* MenuViewModelDelegate.swift */,
+				A155F3432744A0CA0059DB19 /* LoginViewModelDelegate.swift */,
+				A155F3492744A11E0059DB19 /* GameViewModelDelegate.swift */,
+				A155F34B2744A1850059DB19 /* ViewModelDelegate.swift */,
+			);
+			path = "View Model Delegates";
+			sourceTree = "<group>";
+		};
+		A155F32327449D810059DB19 /* Repository Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A155F32927449E6D0059DB19 /* SuperheroRepositoryProtocols.swift */,
+				A155F32B27449E970059DB19 /* SuperheroCollectionRepositoryProtocols.swift */,
+			);
+			path = "Repository Protocols";
+			sourceTree = "<group>";
+		};
+		A155F32627449DF60059DB19 /* Search Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A155F32D27449ED30059DB19 /* SuperheroSearchResponseModel.swift */,
+				A155F32F27449EF00059DB19 /* SuperheroSearchRepository.swift */,
+			);
+			path = "Search Repository";
+			sourceTree = "<group>";
+		};
+		A155F32727449E030059DB19 /* Hero Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A155F33127449F410059DB19 /* SuperheroResponseModel.swift */,
+				A155F33327449F690059DB19 /* SuperheroRepository.swift */,
+			);
+			path = "Hero Repository";
+			sourceTree = "<group>";
+		};
+		A155F32827449E130059DB19 /* Collection Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A155F33527449F870059DB19 /* User.swift */,
+				A155F33727449F9D0059DB19 /* SuperheroCollectionRepository.swift */,
+				A155F33927449FB10059DB19 /* superheroCollectionModel.swift */,
+			);
+			path = "Collection Repository";
+			sourceTree = "<group>";
+		};
 		A1C1450F2744680000B2E1D1 = {
 			isa = PBXGroup;
 			children = (
@@ -83,8 +209,12 @@
 		A1C1451B2744680000B2E1D1 /* UnmaskedEngine */ = {
 			isa = PBXGroup;
 			children = (
+				A155F32127449D430059DB19 /* View Models */,
+				A155F32027449D230059DB19 /* Extensions */,
+				A155F31F27449D030059DB19 /* Repositories */,
 				A1C1451C2744680000B2E1D1 /* UnmaskedEngine.h */,
 				A1C1451D2744680000B2E1D1 /* Info.plist */,
+				A155F3532744A8050059DB19 /* GoogleService-Info.plist */,
 			);
 			path = UnmaskedEngine;
 			sourceTree = "<group>";
@@ -106,7 +236,6 @@
 				46A4F3E0E038AFB0E402ADF9 /* Pods-UnmaskedEngine-UnmaskedEngineTests.debug.xcconfig */,
 				B9EC281A59C9C3657722BB31 /* Pods-UnmaskedEngine-UnmaskedEngineTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -183,6 +312,7 @@
 				TargetAttributes = {
 					A1C145182744680000B2E1D1 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					A1C145212744680100B2E1D1 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -213,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A155F3542744A8050059DB19 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +425,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A155F34E2744A1B60059DB19 /* HeroSearchViewModel.swift in Sources */,
+				A155F33827449F9D0059DB19 /* SuperheroCollectionRepository.swift in Sources */,
+				A155F33E2744A00C0059DB19 /* CustomErrors.swift in Sources */,
+				A155F3502744A1CE0059DB19 /* HeroCollectionViewModel.swift in Sources */,
+				A155F33027449EF00059DB19 /* SuperheroSearchRepository.swift in Sources */,
+				A155F32E27449ED30059DB19 /* SuperheroSearchResponseModel.swift in Sources */,
+				A155F3462744A0E50059DB19 /* LoginViewModel.swift in Sources */,
+				A155F34C2744A1850059DB19 /* ViewModelDelegate.swift in Sources */,
+				A155F32527449DD00059DB19 /* MenuViewModel.swift in Sources */,
+				A155F3442744A0CA0059DB19 /* LoginViewModelDelegate.swift in Sources */,
+				A155F34A2744A11E0059DB19 /* GameViewModelDelegate.swift in Sources */,
+				A155F3522744A5250059DB19 /* Constants.swift in Sources */,
+				A155F3482744A1030059DB19 /* GameViewModel.swift in Sources */,
+				A155F33427449F690059DB19 /* SuperheroRepository.swift in Sources */,
+				A155F33A27449FB10059DB19 /* superheroCollectionModel.swift in Sources */,
+				A155F33627449F870059DB19 /* User.swift in Sources */,
+				A155F32C27449E970059DB19 /* SuperheroCollectionRepositoryProtocols.swift in Sources */,
+				A155F3422744A0B20059DB19 /* MenuViewModelDelegate.swift in Sources */,
+				A155F33227449F410059DB19 /* SuperheroResponseModel.swift in Sources */,
+				A155F33C27449FE70059DB19 /* Extensions.swift in Sources */,
+				A155F32A27449E6D0059DB19 /* SuperheroRepositoryProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +594,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9D5DE2F6DCF40BCC5D6A11E /* Pods-UnmaskedEngine.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = X464DV3JXR;
@@ -458,6 +611,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.junaid.UnmaskedEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -467,6 +621,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1F46E33F96E0BB393DB5B37 /* Pods-UnmaskedEngine.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = X464DV3JXR;
@@ -492,6 +647,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 46A4F3E0E038AFB0E402ADF9 /* Pods-UnmaskedEngine-UnmaskedEngineTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X464DV3JXR;
 				INFOPLIST_FILE = UnmaskedEngineTests/Info.plist;
@@ -511,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9EC281A59C9C3657722BB31 /* Pods-UnmaskedEngine-UnmaskedEngineTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X464DV3JXR;
 				INFOPLIST_FILE = UnmaskedEngineTests/Info.plist;

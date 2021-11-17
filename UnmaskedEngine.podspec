@@ -25,6 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+  'UnmaskedEngine is the framework that the mobile app unmasked is built on.'
                    DESC
 
   spec.homepage     = "https://github.com/JunaidRajah/UnmaskedEngine"
@@ -133,5 +134,7 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
+  spec.dependency 'Firebase/Auth'
+  spec.dependency 'Firebase/Database'
 
 end
