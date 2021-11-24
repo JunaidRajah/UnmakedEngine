@@ -13,7 +13,7 @@ import Foundation
     public let response: String?
     public let id: String
     public let name: String
-    public let powerstats: Powerstats
+    public let powerstats: PowerStats
     public let biography: Biography
     public let appearance: Appearance
     public let work: Work
@@ -68,7 +68,7 @@ import Foundation
     public let url: String
 }
 
-@objcMembers public class Powerstats: NSObject, Codable  {
+@objcMembers public class PowerStats: NSObject, Codable  {
     public let intelligence: String
     public let strength: String
     public let speed: String
