@@ -106,7 +106,7 @@ public class GameViewModel: NSObject {
         }
     }
     
-    public func heroButtonPressed(isHeroOne: Bool) {
+    public func heroSelected(isHeroOne: Bool) {
         
         let hero1Stat = assignHeroStat(hero: hero1)
         let hero2Stat = assignHeroStat(hero: hero2)
@@ -241,9 +241,9 @@ extension GameViewModel: WCSessionDelegate {
         DispatchQueue.main.async {
             if let isHeroOne = message["isHeroOne"] as? Bool {
                 if isHeroOne {
-                    self.heroButtonPressed(isHeroOne: isHeroOne)
+                    self.heroSelected(isHeroOne: isHeroOne)
                 } else {
-                    self.heroButtonPressed(isHeroOne: isHeroOne)
+                    self.heroSelected(isHeroOne: isHeroOne)
                 }
             }
         }
