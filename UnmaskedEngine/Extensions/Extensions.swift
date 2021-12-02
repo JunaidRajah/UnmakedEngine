@@ -26,7 +26,7 @@ import UIKit
     @available(iOS 13.0, *)
     func loadImage(with imageURL: String) {
         if let url = URL(string: imageURL) {
-            self.image = UIImage(systemName: "arrow.clockwise")
+            self.image = UIImage(named: "Unmasked1")
             DispatchQueue.main.async {
                 self.load(url: url)
             }

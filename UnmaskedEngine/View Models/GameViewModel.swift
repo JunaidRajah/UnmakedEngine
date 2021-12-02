@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WatchConnectivity
 
 public enum statistic: String, CaseIterable {
     case intelligence = "intelligence"
@@ -16,7 +17,10 @@ public enum statistic: String, CaseIterable {
     case combat = "combat"
 }
 
-public class GameViewModel {
+@available(iOS 9.0, *)
+public class GameViewModel: NSObject {
+    
+    var session: WCSession?
     
     private var collectionRepository = SuperheroCollectionRepository()
     private var repository: SuperheroRepositoryFetchable
@@ -30,8 +34,7 @@ public class GameViewModel {
     private var user: User?
     
     public init(repository: SuperheroRepositoryFetchable,
-         delegate: GameViewModelDelegate) {
-        
+                delegate: GameViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
     }
@@ -39,6 +42,36 @@ public class GameViewModel {
     public func startGame() {
         fetchHeroes()
         score = 0
+    }
+    
+    public func activateWatchSession() {
+        if WCSession.isSupported() {
+            session = WCSession.default
+            session?.delegate = self
+            session?.activate()
+        }
+    }
+    
+    public func closeWatch() {
+        let data: [String: Any] = ["Close": true as Bool]
+        WCSession.default.sendMessage(data, replyHandler: nil, errorHandler: nil)
+    }
+    
+    public func sendDataToWatch() {
+        if WCSession.default.isReachable {
+            
+            let data: [String: Any] = ["Stat": statName as String,
+                                       "HeroOneName": heroOneName as String,
+                                       "HeroOneID": heroOneID as String,
+                                       "HeroTwoName": heroTwoName as String,
+                                       "HeroTwoID": heroTwoID as String,
+                                       "currentScore": currentScore as String,
+                                       "HeroOneImageURL": heroOneImageURL as String,
+                                       "HeroTwoImageURL": heroTwoImageURL as String,
+                                       "Close": false as Bool]
+            
+            WCSession.default.sendMessage(data, replyHandler: nil, errorHandler: nil)
+        }
     }
     
     private func assignHeroStat(hero: SuperheroResponseModel?) -> Int {
@@ -154,15 +187,65 @@ public class GameViewModel {
         hero1?.name ?? "Masked"
     }
     
+    public var heroOneID: String {
+        hero1?.id ?? "1"
+    }
+    
     public var heroTwoName: String {
         hero2?.name ?? "Masked"
     }
     
+    public var heroTwoID: String {
+        hero2?.id ?? "2"
+    }
+    
     public var currentScore: String {
-        "\(score)"
+        "Score: \(score)"
     }
     
     public var statName: String {
         stat.rawValue
+    }
+}
+
+@available(iOS 9.0, *)
+extension GameViewModel: WCSessionDelegate {
+    
+    public func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+    
+    public func sessionDidDeactivate(_ session: WCSession) {
+    }
+    
+    @available(iOS 9.3, *)
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
+    public func session(_ session: WCSession,
+                 didReceiveMessage message: [String : Any]) {
+        handleSession(session,
+                      didReceiveMessage: message)
+    }
+    
+    public func session(_ session: WCSession,
+                 didReceiveMessage message: [String : Any],
+                 replyHandler: @escaping ([String : Any]) -> Void) {
+        handleSession(session,
+                      didReceiveMessage: message,
+                      replyHandler: replyHandler)
+    }
+    
+    public func handleSession(_ session: WCSession,
+                       didReceiveMessage message: [String : Any],
+                       replyHandler: (([String : Any]) -> Void)? = nil) {
+        DispatchQueue.main.async {
+            if let isHeroOne = message["isHeroOne"] as? Bool {
+                if isHeroOne {
+                    self.heroButtonPressed(isHeroOne: isHeroOne)
+                } else {
+                    self.heroButtonPressed(isHeroOne: isHeroOne)
+                }
+            }
+        }
     }
 }

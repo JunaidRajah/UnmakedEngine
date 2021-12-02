@@ -24,7 +24,7 @@ public class LoginViewModel {
                 self?.delegate?.autoSignIn()
             case .failure(_):
                 let userError = CustomError.userNotFound
-                self?.delegate?.showSignInFailed(error: userError)
+//                self?.delegate?.showSignInFailed(error: userError)
             }
         })
     }
