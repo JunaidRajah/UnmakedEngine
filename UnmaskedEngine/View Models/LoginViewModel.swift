@@ -23,8 +23,7 @@ public class LoginViewModel {
             case .success(_):
                 self?.delegate?.autoSignIn()
             case .failure(_):
-                let userError = CustomError.userNotFound
-                self?.delegate?.showSignInFailed(error: userError)
+                _ = CustomError.userNotFound
             }
         })
     }
